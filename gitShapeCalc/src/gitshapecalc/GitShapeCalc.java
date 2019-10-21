@@ -5,17 +5,18 @@
  */
 package gitshapecalc;
 
+import java.util.Scanner;
+
 /**
  *
  * @author S347096083
  */
 public class GitShapeCalc {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What type of shape is this?\n(Enter: Triangle, Square, Rectangle, Parallelogram, Circle, Ellipse, or Trapezoid");
+        String shape = sc.nextLine();
     }
     
 }
