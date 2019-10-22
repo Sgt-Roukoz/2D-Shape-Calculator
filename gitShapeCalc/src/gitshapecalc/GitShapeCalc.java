@@ -15,7 +15,7 @@ public class GitShapeCalc {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("What type of shape is this?\n(Enter: Triangle, Square, Rectangle, Parallelogram, Circle, Ellipse, or Trapezoid");
+        System.out.println("What type of shape is this?\n(Enter: Triangle, Square, Rectangle, Parallelogram, Circle, Ellipse, or Trapezoid)");
         String shape = sc.nextLine();
         switch(shape){
             case "Triangle":
