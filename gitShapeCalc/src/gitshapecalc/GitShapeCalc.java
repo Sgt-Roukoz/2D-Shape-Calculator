@@ -20,7 +20,11 @@ public class GitShapeCalc {
         switch(shape){
             case "Triangle":
                 baseShape tri = new baseShape(2,7);
+                break;
+            default:
+                System.out.println("This shape was not an option");
+                break;
     }
   }
-
+}
 
