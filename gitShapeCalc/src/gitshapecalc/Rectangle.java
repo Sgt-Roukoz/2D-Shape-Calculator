@@ -1,6 +1,6 @@
 /*
  * Rectangle class, a child-class of the super-class "Square"
- * Adds another attribute (height) to caculate the area ad perimeter
+ * Adds another attribute (height) to caculate the area and perimeter
  */
 package gitshapecalc;
 
@@ -13,12 +13,12 @@ public class Rectangle extends Square {
         this.height = height;  
     }
     
-    public double retPerimeter (){
+   @Override public double retPerimeter (){ // Override of the two base methods from the superclass
         double perimeter = 2*base + 2*height;
         return perimeter;
     }
     
-    public double retArea (){
+   @Override public double retArea (){
         double area = base * height;
         return area;
     }
