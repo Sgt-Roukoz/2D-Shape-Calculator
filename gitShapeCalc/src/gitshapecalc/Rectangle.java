@@ -8,7 +8,7 @@ public class Rectangle extends Square {
     double height;
     
     public Rectangle(double base, double height){
-        super(base,height);
+        super(base);
         this.base = base;
         this.height = height;  
     }
