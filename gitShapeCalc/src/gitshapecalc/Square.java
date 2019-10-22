@@ -9,22 +9,20 @@ package gitshapecalc;
  *
  * @author S347096083
  */
-public class baseShape {
-    double side1;
-    double side2;
+public class Square {
+    double base;
     
-    public baseShape(double side1, double side2){
-        this.side1 = side1;
-        this.side2 = side2;
+    public Square(double side1){
+        this.base = side1;
     }
     
     public double retPerimeter (){
-        double perimeter = 2*side1 + 2*side2;
+        double perimeter = 4*base;
         return perimeter;
     }
     
     public double retArea (){
-        double area = side1*side2;
+        double area = base * base;
         return area;
     }
 }
