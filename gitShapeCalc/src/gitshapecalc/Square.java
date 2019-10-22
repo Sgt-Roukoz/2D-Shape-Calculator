@@ -9,10 +9,10 @@ package gitshapecalc;
  *
  * @author S347096083
  */
-public class baseShape {
+public class Square {
     double base;
     
-    public baseShape(double side1, double side2){
+    public Square(double side1, double side2){
         this.base = side1;
     }
     
@@ -24,16 +24,5 @@ public class baseShape {
     public double retArea (){
         double area = base * base;
         return area;
-    }
-}
-
-class Rectangle extends baseShape {
-    double height;
-    
-    public Rectangle(double base, double height){
-        super(base,height);
-        this.base = base;
-        this.height = height;
-        
     }
 }
