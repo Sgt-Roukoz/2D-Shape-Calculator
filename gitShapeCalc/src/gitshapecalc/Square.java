@@ -12,7 +12,7 @@ package gitshapecalc;
 public class Square {
     double base;
     
-    public Square(double side1, double side2){
+    public Square(double side1){
         this.base = side1;
     }
     
