@@ -13,10 +13,9 @@ public class Rhombus extends Square {
     double diagonal1;
     double diagonal2;
     
-    public Rhombus (double base, double diagonal1, double diagonal2){
+    public Rhombus (double base, double diagonal2){
         super(base);
-        this.base = base;
-        this.diagonal1 = diagonal1;
+        this.diagonal1 = base;
         this.diagonal2 = diagonal2;
     }
     
@@ -24,4 +23,9 @@ public class Rhombus extends Square {
         double area = diagonal1 * diagonal2;
         return area;
     }
+   
+   @Override public double retPerimeter (){
+        double perimeter = 2*Math.sqrt(diagonal1*diagonal1+diagonal2*diagonal2);
+        return perimeter;
+}
 }
