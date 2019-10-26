@@ -209,12 +209,12 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1PropertyChange
     
     public void clearText(){
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
-        jTextField6.setText("");
-        jTextField7.setText("");
+        jTextField1.setText("0");
+        jTextField2.setText("0");
+        jTextField3.setText("0");
+        jTextField4.setText("0");
+        jTextField6.setText("0");
+        jTextField7.setText("0");
     }
     
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -364,6 +364,18 @@ public class Calculator extends javax.swing.JFrame {
                     Trapezoid tr = new Trapezoid(val1, val2, val3, val4, val5);
                     jTextField7.setText(String.valueOf(tr.retArea()));
                     break;
+                case "Rhombus":
+                    Rhombus rh = new Rhombus(val1, val2);
+                    jTextField7.setText(String.valueOf(rh.retArea()));
+                    break;
+                case "Circle":
+                    Circle circ = new Circle(val1);
+                    jTextField7.setText(String.valueOf(circ.retArea()));
+                    break;
+                case "Ellipse":
+                    Ellipse eli = new Ellipse(val1, val2);
+                    jTextField7.setText(String.valueOf(eli.retArea()));
+                    break;
             }
         }
         else if (jRadioButton2.isSelected()){
@@ -387,6 +399,18 @@ public class Calculator extends javax.swing.JFrame {
                 case "Trapezoid":
                     Trapezoid tr = new Trapezoid(val1, val2, val3, val4, val5);
                     jTextField7.setText(String.valueOf(tr.retPerimeter()));
+                    break;
+                case "Rhombus":
+                    Rhombus rh = new Rhombus(val1, val2);
+                    jTextField7.setText(String.valueOf(rh.retPerimeter()));
+                    break;
+                case "Circle":
+                    Circle circ = new Circle(val1);
+                    jTextField7.setText(String.valueOf(circ.retPerimeter()));
+                    break;
+                case "Ellipse":
+                    Ellipse eli = new Ellipse(val1, val2);
+                    jTextField7.setText(String.valueOf(eli.retPerimeter()));
                     break;
             }
         }
