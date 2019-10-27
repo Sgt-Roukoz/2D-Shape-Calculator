@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package gitshapecalc;
+import java.math.*;
+import java.lang.*;
 
 /**
  *
