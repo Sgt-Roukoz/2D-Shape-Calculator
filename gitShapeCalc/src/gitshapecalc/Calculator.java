@@ -56,6 +56,7 @@ public class Calculator extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("2D Shape Calculator by Mar & Tun");
         setMinimumSize(new java.awt.Dimension(403, 226));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("2D Shape Calculator"));
@@ -64,6 +65,10 @@ public class Calculator extends javax.swing.JFrame {
         jLabel1.setText("Base 1:");
 
         jLabel2.setText("Height:");
+
+        jTextField1.setText("0");
+
+        jTextField2.setText("0");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Square", "Rectangle", "Parallelogram", "Rhombus", "Regular Polygon", "Trapezoid", "Triangle", "Circle", "Ellipse" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -80,6 +85,12 @@ public class Calculator extends javax.swing.JFrame {
         jLabel3.setText(" Side 1:");
 
         jLabel4.setText("Side 2:");
+
+        jTextField3.setText("0");
+
+        jTextField4.setText("0");
+
+        jTextField6.setText("0");
 
         jLabel5.setText("Base2:");
 
@@ -209,12 +220,12 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1PropertyChange
     
     public void clearText(){
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
-        jTextField6.setText("");
-        jTextField7.setText("");
+        jTextField1.setText("0");
+        jTextField2.setText("0");
+        jTextField3.setText("0");
+        jTextField4.setText("0");
+        jTextField6.setText("0");
+        jTextField7.setText("0");
     }
     
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -324,6 +335,21 @@ public class Calculator extends javax.swing.JFrame {
             jTextField6.setVisible(false);
             clearText();
         }
+        else if (jComboBox1.getSelectedItem().equals("Triangle")){
+            jLabel1.setText("Base:");
+            jLabel2.setVisible(true);
+            jLabel2.setText("Height:");
+            jTextField2.setVisible(true);
+            jLabel3.setVisible(true);
+            jLabel3.setText("Side 1:");
+            jTextField3.setVisible(true);
+            jLabel4.setVisible(true);
+            jLabel4.setText("Side 2:");
+            jTextField4.setVisible(true);
+            jLabel5.setVisible(false);
+            jTextField6.setVisible(false);
+            clearText();
+        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
@@ -364,6 +390,22 @@ public class Calculator extends javax.swing.JFrame {
                     Trapezoid tr = new Trapezoid(val1, val2, val3, val4, val5);
                     jTextField7.setText(String.valueOf(tr.retArea()));
                     break;
+                case "Rhombus":
+                    Rhombus rh = new Rhombus(val1, val2);
+                    jTextField7.setText(String.valueOf(rh.retArea()));
+                    break;
+                case "Circle":
+                    Circle circ = new Circle(val1);
+                    jTextField7.setText(String.valueOf(circ.retArea()));
+                    break;
+                case "Ellipse":
+                    Ellipse eli = new Ellipse(val1, val2);
+                    jTextField7.setText(String.valueOf(eli.retArea()));
+                    break;
+                case "Triangle":
+                    Triangle tri = new Triangle(val1, val2, val3, val4);
+                    jTextField7.setText(String.valueOf(tri.retArea()));
+                    break;
             }
         }
         else if (jRadioButton2.isSelected()){
@@ -387,6 +429,22 @@ public class Calculator extends javax.swing.JFrame {
                 case "Trapezoid":
                     Trapezoid tr = new Trapezoid(val1, val2, val3, val4, val5);
                     jTextField7.setText(String.valueOf(tr.retPerimeter()));
+                    break;
+                case "Rhombus":
+                    Rhombus rh = new Rhombus(val1, val2);
+                    jTextField7.setText(String.valueOf(rh.retPerimeter()));
+                    break;
+                case "Circle":
+                    Circle circ = new Circle(val1);
+                    jTextField7.setText(String.valueOf(circ.retPerimeter()));
+                    break;
+                case "Ellipse":
+                    Ellipse eli = new Ellipse(val1, val2);
+                    jTextField7.setText(String.valueOf(eli.retPerimeter()));
+                    break;
+                case "Triangle":
+                    Triangle tri = new Triangle(val1, val2, val3, val4);
+                    jTextField7.setText(String.valueOf(tri.retPerimeter()));
                     break;
             }
         }
