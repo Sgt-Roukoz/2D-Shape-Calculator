@@ -56,6 +56,7 @@ public class Calculator extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("2D Shape Calculator by Mar & Tun");
         setMinimumSize(new java.awt.Dimension(403, 226));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("2D Shape Calculator"));
@@ -64,6 +65,10 @@ public class Calculator extends javax.swing.JFrame {
         jLabel1.setText("Base 1:");
 
         jLabel2.setText("Height:");
+
+        jTextField1.setText("0");
+
+        jTextField2.setText("0");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Square", "Rectangle", "Parallelogram", "Rhombus", "Regular Polygon", "Trapezoid", "Triangle", "Circle", "Ellipse" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -80,6 +85,12 @@ public class Calculator extends javax.swing.JFrame {
         jLabel3.setText(" Side 1:");
 
         jLabel4.setText("Side 2:");
+
+        jTextField3.setText("0");
+
+        jTextField4.setText("0");
+
+        jTextField6.setText("0");
 
         jLabel5.setText("Base2:");
 
@@ -324,6 +335,21 @@ public class Calculator extends javax.swing.JFrame {
             jTextField6.setVisible(false);
             clearText();
         }
+        else if (jComboBox1.getSelectedItem().equals("Triangle")){
+            jLabel1.setText("Base:");
+            jLabel2.setVisible(true);
+            jLabel2.setText("Height:");
+            jTextField2.setVisible(true);
+            jLabel3.setVisible(true);
+            jLabel3.setText("Side 1:");
+            jTextField3.setVisible(true);
+            jLabel4.setVisible(true);
+            jLabel4.setText("Side 2:");
+            jTextField4.setVisible(true);
+            jLabel5.setVisible(false);
+            jTextField6.setVisible(false);
+            clearText();
+        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
@@ -376,6 +402,10 @@ public class Calculator extends javax.swing.JFrame {
                     Ellipse eli = new Ellipse(val1, val2);
                     jTextField7.setText(String.valueOf(eli.retArea()));
                     break;
+                case "Triangle":
+                    Triangle tri = new Triangle(val1, val2, val3, val4);
+                    jTextField7.setText(String.valueOf(tri.retArea()));
+                    break;
             }
         }
         else if (jRadioButton2.isSelected()){
@@ -411,6 +441,10 @@ public class Calculator extends javax.swing.JFrame {
                 case "Ellipse":
                     Ellipse eli = new Ellipse(val1, val2);
                     jTextField7.setText(String.valueOf(eli.retPerimeter()));
+                    break;
+                case "Triangle":
+                    Triangle tri = new Triangle(val1, val2, val3, val4);
+                    jTextField7.setText(String.valueOf(tri.retPerimeter()));
                     break;
             }
         }
