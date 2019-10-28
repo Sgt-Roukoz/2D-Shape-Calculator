@@ -293,7 +293,7 @@ public class Calculator extends javax.swing.JFrame {
             jLabel4.setText("Side 2:");
             jTextField4.setVisible(true);
             jLabel5.setVisible(true);
-            jLabel5.setText("Base 2");
+            jLabel5.setText("Base 2:");
             jTextField6.setVisible(true);
             clearText();
         }
