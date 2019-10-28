@@ -26,6 +26,6 @@ public class NPolygon extends Square{
         double centerLen = base/(2*Math.tan(180/sides)); //Calculate length from center to edge
         double area = 2*((sides*base)*centerLen); // calculate area (assumes regular polygon)
         Double finaArea = BigDecimal.valueOf(area).setScale(2, RoundingMode.HALF_UP).doubleValue(); // Round double value to 2 decimal places
-        return fiaArea;
+        return finaArea;
     }
 }
