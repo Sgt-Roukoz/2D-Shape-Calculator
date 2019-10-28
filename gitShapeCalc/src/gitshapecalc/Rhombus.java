@@ -28,7 +28,7 @@ public class Rhombus extends Square {
    
    @Override public double retPerimeter (){
         double perimeter = 2*Math.sqrt(diagonal1*diagonal1+diagonal2*diagonal2);
-        Double finaPeri = BigDecimal.valueOf(perimeter).setScale(3, RoundingMode.HALF_UP).doubleValue(); // Round double value to 2 decimal places
+        Double finaPeri = BigDecimal.valueOf(perimeter).setScale(2, RoundingMode.HALF_UP).doubleValue(); // Round double value to 2 decimal places
         return finaPeri;
 }
 }
